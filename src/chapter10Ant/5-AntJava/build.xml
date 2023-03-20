@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF8"?>
+<project>
+
+    <property name="destEncoding" value="UTF-8" />
+
+	<target name = "compile">
+        <javac 
+            encoding="${destEncoding}"
+            destdir="."
+            includeantruntime="false"
+        >
+        <src path="."/>
+        </javac>       
+    </target>
+
+    <target name = "run">
+        <java classname="Hello">
+            <classpath>
+                <pathelement location="."></pathelement>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <delete file="Hello.class"/>
+    </target>
+   
+</project>

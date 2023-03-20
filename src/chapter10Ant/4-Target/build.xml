@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF8"?>
+<project>
+
+	<target name="testMkdir">
+        <mkdir dir="test"/>
+    </target>
+
+    <!-- 运行前：先创建test目录 -->
+    <target name="testDelete">
+        <delete dir="test"/>
+    </target>
+
+    <!-- 运行前：没有则新建test目录，里面新建一个test.txt -->
+    <target name="testZip">
+        <zip destfile="test.zip">
+            <fileset dir="test">
+                <include name = "test.txt"/>
+            </fileset>
+        </zip>
+    </target>
+
+    <!-- 运行前：没有则新建test目录，然后在test目录新建一个txt文档 -->
+    <target name="testCopy">
+        <copy todir="testCopy" overwrite="true">
+            <fileset dir="test">
+                <include name="*.txt"></include>
+            </fileset>
+        </copy>
+    </target>
+</project>

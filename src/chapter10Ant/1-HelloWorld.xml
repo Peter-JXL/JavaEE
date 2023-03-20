@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF8"?>
+<project name = "HelloWorld" default = "say hello">
+	<target name = "say hello" description = "你好，世界！">
+        <echo level="info" message = "Hello World!"></echo>
+    </target>
+</project>

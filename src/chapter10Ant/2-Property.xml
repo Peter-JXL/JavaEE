@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF8"?>
+<project default="echoProperty">
+	<property name="myName" value="Peter JXL"/>
+	<target  name="echoProperty">
+		<echo>${myName} is my name. </echo>
+	</target>
+</project>
